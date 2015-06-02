@@ -16,7 +16,12 @@ mkt-header-nav {
     order: 3;
 
     +media--wide-tablet() {
-        margin-right: 60px;
+        +ltr() {
+            margin-right: 60px;
+        }
+        +rtl() {
+            margin-left: 60px;
+        }
     }
 }
 .header--settings-toggle {
@@ -429,6 +434,11 @@ body > .banners mkt-banner {
     }
     .desktop .wordmark {
         background: url(../img/pretty/marketplace-beta-logo.png) no-repeat 0 50% / 231px auto;
+    }
+    #site-header {
+        +rtl() {
+            flex-direction: row;
+        }
     }
 }
 
